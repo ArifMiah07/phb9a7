@@ -10,7 +10,7 @@ const Banner = () => {
                 Unveil the joy of cooking with our personalized classes, crafted to match your taste and skill level.<br /> Discover new techniques,  flavors, and dishes in an exceptional culinary adventure just for you!
             </p>
             <div>
-                <button className="btn bg-[#0BE58A] font-bold text-black rounded-[50px] mr-8 ">Explore Now</button>
+                <button className="btn bg-[#0BE58A] font-bold text-black rounded-[50px] mr-8 "><a href="#recipe">Explore Now</a></button>
                 <button className="bg-base-0 font-bold text-white rounded-[50px] border border-white py-3 px-5 ">Our Feedback</button>
             </div>
         </div>

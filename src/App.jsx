@@ -1,33 +1,34 @@
 
-import { useState } from 'react'
+import { useState } from 'react';
 import './App.css'
-import { useEffect } from 'react';
 import Header from './components/Header/Header';
+import Main from './components/Main/Main';
 
 function App() {
-  const [items, setItems] = useState([]);
+const [cooks, setCooks] = useState(0);
+const [recipes, setRecipes] = useState([]);
 
-  useEffect( ()=>{
-    fetch('./recipe.json')
-    .then(res => res.json())
-    .then(data => setItems(data));
-  }, [])
+const handleWTCooks = (id, recipe) =>{
+  // Update cooks state by incrementing it by 1
+  setCooks(cooks + 1);
+
+  // Add the new recipe to the recipes array
+  const newRecipes = [...recipes, recipe];
+  setRecipes(newRecipes);
+}
+
+
+// const handleRecipes = (recipe) =>{
+//   console.log('hi');
+// }
 
 
   return (
     <>
       <div>
-        
         <Header></Header>
+        <Main handleWTCooks={handleWTCooks} cooks={cooks} recipes={recipes}></Main>
       </div>
-      <div>
-      <h1>React Items: {items.length}</h1>
-      {
-        items.map((item, idx)=> <img key={idx} src={item.recipe_image
-        }></img>)
-      }
-      </div>
-
     </>
   )
 }
