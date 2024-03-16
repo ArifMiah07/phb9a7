@@ -3,7 +3,7 @@ import Sidebar from "./Sidebar/Sidebar";
 import PropTypes from 'prop-types';
 
 const Main = ({handleWTCooks, cooks, recipes}) => {
-    console.log(recipes);
+    // console.log(recipes);
     return (
         <div id="recipe" className="w-[1170px] mx-auto flex flex-col">
             {/* text and title */}

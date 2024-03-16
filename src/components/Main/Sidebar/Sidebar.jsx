@@ -1,20 +1,14 @@
 import CurrentlyCooking from "./Cook/CurrentlyCooking";
 import WantToCooking from "./Cook/WantToCooking";
 import PropTypes from 'prop-types';
-// import Recipes from "../Recipes/Recipes";
 
 const Sidebar = ({handleWTCooks, cooks, recipes}) => {
-    console.log('cooks',cooks);
+    // console.log('cooks',cooks);
     return (
         <div className="flex flex-col gap-3 h-fit border border-[#0be58a] rounded-[36px]">
             <div>
                 <div>
                     <h1 className="font-semibold text-[24px] text-[#282828] text-center"> Want to cook: {cooks}
-                        {/* {
-                            recipes.map((recipe, idx)=> (
-                                <span key={idx}>{idx + 1}</span>
-                            ))
-                        } */}
                     </h1>
                 </div>
                 <WantToCooking handleWTCooks={handleWTCooks} recipes={recipes}></WantToCooking>

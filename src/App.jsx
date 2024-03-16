@@ -1,36 +1,32 @@
+import { ToastContainer, toast } from 'react-toastify';
 
 import { useState } from 'react';
-import './App.css'
+import 'react-toastify/dist/ReactToastify.css';
 import Header from './components/Header/Header';
 import Main from './components/Main/Main';
 
 function App() {
-const [cooks, setCooks] = useState(0);
-const [recipes, setRecipes] = useState([]);
+    const [cooks, setCooks] = useState(0);
+    const [recipes, setRecipes] = useState([]);
 
-const handleWTCooks = (id, recipe) =>{
-  // Update cooks state by incrementing it by 1
-  setCooks(cooks + 1);
+    const handleWTCooks = (id, recipe) =>{
+        const isExist = recipes.find((item)=> item.recipe_id === id );
+        if (!isExist) {
+            setCooks(cooks + 1);
+            const newRecipes = [...recipes, recipe];
+            setRecipes(newRecipes);
+        } else {
+            toast.error('This recipe is already added!');
+        }
+    }
 
-  // Add the new recipe to the recipes array
-  const newRecipes = [...recipes, recipe];
-  setRecipes(newRecipes);
+    return (
+        <div>
+            <Header />
+            <Main handleWTCooks={handleWTCooks} cooks={cooks} recipes={recipes} />
+            <ToastContainer />
+        </div>
+    );
 }
 
-
-// const handleRecipes = (recipe) =>{
-//   console.log('hi');
-// }
-
-
-  return (
-    <>
-      <div>
-        <Header></Header>
-        <Main handleWTCooks={handleWTCooks} cooks={cooks} recipes={recipes}></Main>
-      </div>
-    </>
-  )
-}
-
-export default App
+export default App;

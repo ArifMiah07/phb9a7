@@ -14,15 +14,15 @@ const Recipe = ({recipe, handleWTCooks}) => {
                 <h1 className="text-[20px] font-semibold text-[#2b2b2b] ">{recipe_name}</h1>
                 <p className="text-[#878787]">{short_description}</p>
                 <h2>Ingredients: {ingredients.length}</h2>
-                <ul>
+                <ul className='px-8'>
                     {
-                        ingredients.map((ingredient, idx)=> <li key={idx}>{idx + 1}. {ingredient}</li>)
+                        ingredients.map((ingredient, idx)=> <li key={idx} className="list-disc"> {ingredient}</li>)
                     }
                 </ul>
             </div>
             <div>
                 <div className="flex gap-5">
-                    <p className="flex items-center gap-1"><CiClock2 /> {preparing_time} min</p>
+                    <p className="flex items-center gap-1"><CiClock2 /> {preparing_time} minutes</p>
                     <p className="flex items-center gap-1"><RiFireLine /> {calories} calories</p>
                 </div>
                 <div>
