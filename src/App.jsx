@@ -2,7 +2,7 @@
 import { useState } from 'react'
 import './App.css'
 import { useEffect } from 'react';
-import Navbar from './components/Header/Navbar';
+import Header from './components/Header/Header';
 
 function App() {
   const [items, setItems] = useState([]);
@@ -17,7 +17,8 @@ function App() {
   return (
     <>
       <div>
-        <Navbar></Navbar>
+        
+        <Header></Header>
       </div>
       <div>
       <h1>React Items: {items.length}</h1>

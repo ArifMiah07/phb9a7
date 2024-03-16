@@ -2,8 +2,8 @@ import { FiAlignCenter } from "react-icons/fi";
 
 const Navbar = () => {
     return (
-        <div className="w-[1170px] mx-auto">
-            <div className="navbar bg-base-100 flex justify-between">
+        <div className="w-[1170px] mx-auto ">
+            <div className="navbar bg-[#0BE58A] rounded-2xl mb-2 flex justify-between">
                 <div className="flex justify-between">
                     <div className="">
                         <div className="dropdown">
@@ -19,7 +19,7 @@ const Navbar = () => {
                         </div>
                     </div>
                     <div className="flex-1">
-                        <a className="btn btn-ghost text-xl">Recipe Calories</a>
+                        <a className="btn btn-ghost text-xl font-semibold">Recipe Calories</a>
                     </div>
                     <div className="navbar-center hidden lg:flex">
                         <ul className="menu menu-horizontal px-1">
@@ -42,7 +42,7 @@ const Navbar = () => {
                     <div className="dropdown dropdown-end">
                         <div tabIndex="0" role="button" className="btn btn-ghost btn-circle avatar">
                             <div className="w-10 rounded-full">
-                                <img alt="Tailwind CSS Navbar component" src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+                                <img alt="Tailwind CSS Navbar component" src="https://i.ibb.co/2kT1fNP/8a4dc393-6725-4141-91b8-e68252d64235.jpg" />
                             </div>
                         </div>
                         <ul tabIndex="0" className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52">
