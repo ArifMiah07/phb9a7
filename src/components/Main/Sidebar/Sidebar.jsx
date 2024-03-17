@@ -12,16 +12,13 @@ const Sidebar = ({ handleWTCooks, cooks, recipes, updateCooks }) => {
     const handlePreparing = (time, calorie, idx, recipe_name, id) => {
         const newTime = times + time;
         const newCalorie = calories + calorie;
-        const newItem = { idx, recipe_name, time, calorie, id }; // Create a new cooking item
+        const newItem = { idx, recipe_name, time, calorie, id };
         const newCurrentlyCooking = [...currentlyCooking, newItem];
-        console.log(newCurrentlyCooking); // Add the new item to the state array
+        console.log(newCurrentlyCooking); 
         setTimes(newTime);
         setCalories(newCalorie);
         updateCooks(prevCooks => prevCooks - 1);
         setCurrentlyCooking(newCurrentlyCooking);
-    
-    
-        console.log('bondho tomar id paichi', id);
     }
     const handleRemoveFromCurrentlyCooking = (id)=>{
         // const remainingCooks = newCurrentlyCooking.filter(item => item.id !== id);
