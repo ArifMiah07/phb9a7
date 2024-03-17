@@ -19,7 +19,7 @@ function App() {
             toast.error('This recipe is already added!');
         }
     }
-    // Function to update cooks state
+    //update cooks state
     const updateCooks = (newCooks) => {
         setCooks(newCooks);
     }
