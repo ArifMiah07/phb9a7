@@ -1,27 +1,28 @@
 import PropTypes from 'prop-types';
 import { CiClock2 } from "react-icons/ci";
 import { RiFireLine } from "react-icons/ri";
+import './Recipe.css'
 
 const Recipe = ({recipe, handleWTCooks}) => {
     const {calories, ingredients, preparing_time, recipe_id, recipe_image, recipe_name, short_description } = recipe;
     // console.log(recipe);
     return (
-        <div className="flex flex-col gap-4, p-6 border border-[#0be58a] rounded-[42px] drop-shadow-2xl">
-            <div >
+        <div className="flex flex-col gap-4 justify-between p-6 border border-[#0be58a] rounded-[42px] drop-shadow-2xl">
+            <div className='mb-6'>
                 <img className="border-2 rounded-[32px] border-[#0be58a] drop-shadow-xl" src={recipe_image} alt="" />
             </div>
             <div>
-                <h1 className="text-[20px] font-semibold text-[#2b2b2b] ">{recipe_name}</h1>
-                <p className="text-[#878787]">{short_description}</p>
-                <h2>Ingredients: {ingredients.length}</h2>
-                <ul className='px-8'>
+                <h1 className="text-[20px] mb-4 font-semibold text-[#2b2b2b] ">{recipe_name}</h1>
+                <p className="text-[#878787] mb-8">{short_description}</p>
+                <h2 className='text-[18px] text-[#282828] font-medium'>Ingredients: {ingredients.length}</h2>
+                <ul className='px-8 p-5'>
                     {
-                        ingredients.map((ingredient, idx)=> <li key={idx} className="list-disc"> {ingredient}</li>)
+                        ingredients.map((ingredient, idx)=> <li key={idx} className="list-disc text-[#878787] text-[18px] fira-sans"> {ingredient}</li>)
                     }
                 </ul>
             </div>
             <div>
-                <div className="flex gap-5">
+                <div className="flex gap-5 mb-6">
                     <p className="flex items-center gap-1"><CiClock2 /> {preparing_time} minutes</p>
                     <p className="flex items-center gap-1"><RiFireLine /> {calories} calories</p>
                 </div>

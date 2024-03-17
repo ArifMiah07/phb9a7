@@ -19,11 +19,15 @@ function App() {
             toast.error('This recipe is already added!');
         }
     }
+    // Function to update cooks state
+    const updateCooks = (newCooks) => {
+        setCooks(newCooks);
+    }
 
     return (
         <div>
             <Header />
-            <Main handleWTCooks={handleWTCooks} cooks={cooks} recipes={recipes} />
+            <Main handleWTCooks={handleWTCooks} cooks={cooks} recipes={recipes} updateCooks={updateCooks} />
             <ToastContainer />
         </div>
     );
