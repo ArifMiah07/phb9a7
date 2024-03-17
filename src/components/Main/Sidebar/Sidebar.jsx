@@ -14,7 +14,7 @@ const Sidebar = ({ handleWTCooks, cooks, recipes, updateCooks }) => {
         const newCalorie = calories + calorie;
         const newItem = { idx, recipe_name, time, calorie, id };
         const newCurrentlyCooking = [...currentlyCooking, newItem];
-        console.log(newCurrentlyCooking); 
+        // console.log(newCurrentlyCooking); 
         setTimes(newTime);
         setCalories(newCalorie);
         updateCooks(prevCooks => prevCooks - 1);
